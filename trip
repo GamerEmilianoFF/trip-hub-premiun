@@ -1,0 +1,595 @@
+--trip hub premiun v1.2
+
+-- Instances:
+
+local welcome = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+welcome.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+welcome.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = welcome
+Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Frame.BorderColor3 = Color3.fromRGB(0, 85, 127)
+Frame.BorderSizePixel = 7
+Frame.Position = UDim2.new(0.3, 0, 0.2, 0)
+Frame.Size = UDim2.new(0, 423, 0, 241)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+ImageLabel.BorderColor3 = Color3.fromRGB(25, 25, 25)
+ImageLabel.Position = UDim2.new(0.274231672, 0, 0.0438247025, 0)
+ImageLabel.Size = UDim2.new(0, 191, 0, 174)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=9754796483"
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.BorderColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.Position = UDim2.new(0.0118203312, 0, 0.628308117, 0)
+TextLabel.Size = UDim2.new(0, 413, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "WELCOME TO"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 36.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel_2.BorderColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel_2.Position = UDim2.new(0, 0, 0.797470808, 0)
+TextLabel_2.Size = UDim2.new(0, 423, 0, 50)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "TRIP HUB!"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 36.000
+
+wait(6)
+game.Players.LocalPlayer.PlayerGui.ScreenGui:Destroy()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/updategui/main/xd",true))()
+wait(5)
+game.Players.LocalPlayer.PlayerGui.update:Destroy()
+
+
+
+
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Trip hub premium v1")
+
+local serv = win:Server("trip hub premium v1", "")
+
+local scri = serv:Channel("script")
+scri:Label("speed bypass")
+scri:Seperator()
+
+
+scri:Button("speed bypass button", function()
+DiscordLib:Notification("Notification", "speed bypass activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
+end)
+scri:Button("speed bypass toggle", function()
+DiscordLib:Notification("Notification", "speed bypass toggle activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/toggles_speed/main/Speed",true))()
+end)
+
+scri:Seperator()
+scri:Label("chat spy.")
+scri:Button("chat spy", function()
+DiscordLib:Notification("Notification", "chat spy activate!", "Okay!")
+loadstring(game:HttpGet('https://pastebin.com/raw/TBRu2TW5'))()
+end)
+scri:Seperator()
+scri:Label("server search.")
+scri:Button("server search hub", function()
+DiscordLib:Notification("Notification", "server finder activate!", "Okay!")
+loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
+end)
+scri:Button("join server auto", function()
+DiscordLib:Notification("Notification", "search server auto activate!", "Okay!")
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+   local Servers = ListServers(Next)
+   Server = Servers.data[1]
+   Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+end)
+scri:Seperator()
+scri:Label("kick gui.")
+scri:Button("kick me gui", function()
+DiscordLib:Notification("Notification", "kick me fui activate!", "Okay!")
+local MainToggle = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ToggleBtn = Instance.new("ImageButton")
+local x = Instance.new("TextButton")
+MainToggle.Name = "MainToggle"
+MainToggle.Parent = game.CoreGui
+MainToggle.ResetOnSpawn = false
+
+Frame.Parent = MainToggle
+Frame.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame.BackgroundTransparency = 0.200
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.89, 0, 0.01, 0)
+Frame.Size = UDim2.new(0, 100, 0, 100)
+
+x.Parent = Frame
+x.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+x.Position = UDim2.new(0.01, 0, 0.0011, 0)
+x.Size = UDim2.new(0, 97, 0 , 100)
+x.Font = Enum.Font.Cartoon
+x.Text = "exit"
+x.TextColor3 = Color3.fromRGB(255, 255 , 255)
+x.TextSize = 25.000
+x.MouseButton1Down:connect(function()
+game.Players.LocalPlayer:Kick("exit server!")
+end)
+end)
+scri:Seperator()
+scri:Label("jumps.")
+scri:Button("inf jump", function()
+DiscordLib:Notification("Notification", "inf jump activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
+end)
+scri:Button("jump fly", function()
+DiscordLib:Notification("Notification", "jump fly activate!", "Okay!")
+local InfiniteJumpEnabled = true
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+
+	if InfiniteJumpEnabled then
+
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+
+	end
+
+end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/infinite_jumps/main/Jumps",true))()
+end)
+
+scri:Seperator()
+scri:Label("fly.")
+scri:Button("fly v2", function()
+DiscordLib:Notification("Notification", "fly v2 activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/FLY-V2/main/Fly%20no%20lag",true))()
+end)
+scri:Button("fly v3", function()
+DiscordLib:Notification("Notification", "fly v3 activate!", "Okay!")
+loadstring(game:HttpGet("https://pastebin.com/Dg2WFaMU",true))()
+end)
+
+
+local player = serv:Channel("Player (FE)")
+player:Label("(fe).")
+player:Seperator()
+player:Button("headless (fe)", function()
+DiscordLib:Notification("Notification", "headless activate!", "Okay!")
+game.Players.LocalPlayer.Character.Head.Transparency = 1
+
+for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+
+if (v:IsA("Decal")) then
+
+v:Destroy()
+
+end
+
+end
+end)
+player:Button("korblox (fe)", function()
+DiscordLib:Notification("Notification", "korblox activate!", "Okay!")
+local ply = game.Players.LocalPlayer
+
+        local chr = ply.Character
+
+        chr.RightLowerLeg.MeshId = "902942093"
+
+        chr.RightLowerLeg.Transparency = "1"
+
+        chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
+
+        chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
+
+        chr.RightFoot.MeshId = "902942089"
+
+        chr.RightFoot.Transparency = "1"
+end)
+player:Button("korblox & headless (fe) gui", function()
+DiscordLib:Notification("Notification", "korblox headless gui activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/kor_hed_gui/main/Gui",true))()
+end)
+player:Button("face changer carlhub", function()
+DiscordLib:Notification("Notification", "face changer Activate!", " Okay!")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/Scripts/main/carlface'))()
+end)
+player:Button("animation carlhub (fe)",function()
+DiscordLib:Notification("Notification", "animation carlhub Activate!", " okay")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/carlcoded/scripp/main/animationcombos'))()
+end)
+
+local esp = serv:Channel("esp")
+esp:Label("esp.")
+esp:Seperator()
+esp:Button("esp (pro)", function()
+DiscordLib:Notification("Notification", "esp pro activate!", "Okay!")
+spawn(loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true)))();
+end)
+esp:Button("esp v2", function()
+DiscordLib:Notification("Notification", "esp v2 activate!", "Okay!")
+local t = {}
+setmetatable(t, {
+__index = function(t, k)
+    return function() end
+end
+})
+getgenv().Input = t
+
+local funcs = {"writefile", "readfile", "appendfile"}
+for i,v in pairs(funcs) do
+getgenv()[v] = function() end
+end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+
+local rtx = serv:Channel("rtx")
+rtx:Label("rtx.")
+rtx:Seperator()
+rtx:Button("rtx night", function()
+DiscordLib:Notification("Notification", "rtx night activate!", "Okay!")
+loadstring(game:HttpGet("https://pastebin.com/raw/MSZPFVfE",true))()
+end)
+rtx:Button("rtx day", function()
+DiscordLib:Notification("Notification", "rtx day activate!", "Okay!")
+--script day
+loadstring(game:HttpGet("https://pastebin.com/raw/DRDAAq1Y",true))()
+end)
+rtx:Button("rtx negative", function()
+DiscordLib:Notification("Notification", "rtx negative activate!", "Okay!")
+loadstring(game:HttpGet("https://pastebin.com/raw/xZj8Xut9",true))()
+end)
+rtx:Button("rtx sumer", function()
+DiscordLib:Notification("Notification", "rtx sumer activate!", "Okay!")
+loadstring(game:HttpGet("https://pastebin.com/raw/UYdDycdt",true))()
+end)
+
+
+local fov = serv:Channel("fov")
+fov:Label("fovs.")
+fov:Seperator()
+fov:Button("fov 60", function()
+DiscordLib:Notification("Notification", "fov 60 activate!", "Okay!")
+local FOV = 60
+game.Workspace.Camera.FieldOfView = FOV
+end)
+fov:Button("fov 70", function()
+DiscordLib:Notification("Notification", "fov 70 activate!", "Okay!")
+local FOV = 70
+game.Workspace.Camera.FieldOfView = FOV
+end)
+fov:Button("fov 80", function()
+DiscordLib:Notification("Notification", "fov 80 Activate!", "Okay!")
+local FOV = 80
+game.Workspace.Camera.FieldOfView = FOV
+end)
+fov:Button("fov 90", function()
+DiscordLib:Notification("Notification", "fov 90 activate!", "Okay!")
+local FOV = 90
+game.Workspace.Camera.FieldOfView = FOV
+end)
+fov:Button("fov 100", function()
+DiscordLib:Notification("Notification", "fov 100 activate!", "Okay!")
+local FOV = 100
+game.Workspace.Camera.FieldOfView = FOV
+end)
+fov:Button("fov 110", function()
+DiscordLib:Notification("Notification", "fov 110 activate!", "Okay!")
+local FOV = 110
+game.Workspace.Camera.FieldOfView = FOV
+end)
+fov:Button("fov 120", function()
+DiscordLib:Notification("Notification", "fov 120 Activate!", "Okay!")
+local FOV = 120
+game.Workspace.Camera.FieldOfView = FOV
+end)
+
+
+
+local curs = serv:Channel("cursor custom")
+curs:Label("cursor custom.")
+curs:Seperator()
+
+curs:Button("cursor red", function()
+DiscordLib:Notification("Notification", "cursor red activate!", "Okay!")
+-- red
+local IAPortable = Instance.new("ScreenGui")
+local Cursor = Instance.new("ImageLabel")
+local Hitmarker = Instance.new("ImageLabel")
+IAPortable.Name = "IA Portable"
+IAPortable.Parent = game:GetService('CoreGui')
+IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Cursor.Name = "Cursor"
+Cursor.Parent = IAPortable
+Cursor.AnchorPoint = Vector2.new(0.5, 0.5)
+Cursor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cursor.BackgroundTransparency = 20.000
+Cursor.Size = UDim2.new(0, 150, 0, 350)
+Cursor.Image = "rbxassetid://973823018"
+Cursor.ScaleType = Enum.ScaleType.Fit
+Cursor.Position = UDim2.new(0.5, 0, 0.46, 0)
+end)
+curs:Button("cursor white (+)", function()
+DiscordLib:Notification("Notification", "cursor white activate!", "Okay!")
+-- white +
+local IAPortable = Instance.new("ScreenGui")
+local Cursor = Instance.new("ImageLabel")
+local Hitmarker = Instance.new("ImageLabel")
+IAPortable.Name = "IA Portable"
+IAPortable.Parent = game:GetService('CoreGui')
+IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Cursor.Name = "Cursor"
+Cursor.Parent = IAPortable
+Cursor.AnchorPoint = Vector2.new(0.5, 0.5)
+Cursor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cursor.BackgroundTransparency = 20.000
+Cursor.Size = UDim2.new(0, 70, 0, 25)
+Cursor.Image = "rbxassetid://3874001308"
+Cursor.ScaleType = Enum.ScaleType.Fit
+Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
+end)
+curs:Button("cursor white (?)", function()
+DiscordLib:Notification("Notification", "cursor white activate!", "Okay!")
+--white circle
+local IAPortable = Instance.new("ScreenGui")
+local Cursor = Instance.new("ImageLabel")
+local Hitmarker = Instance.new("ImageLabel")
+IAPortable.Name = "IA Portable"
+IAPortable.Parent = game:GetService('CoreGui')
+IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Cursor.Name = "Cursor"
+Cursor.Parent = IAPortable
+Cursor.AnchorPoint = Vector2.new(0.5, 0.5)
+Cursor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cursor.BackgroundTransparency = 1.000
+Cursor.Size = UDim2.new(0, 400, 0, 300)
+Cursor.Image = "rbxassetid://3355815697"
+Cursor.ScaleType = Enum.ScaleType.Fit
+Cursor.Position = UDim2.new(0.5, 0, 0.5, 0)
+end)
+curs:Button("cursor", function()
+DiscordLib:Notification("Notification", "cursor activate!", "Okay!")
+end)
+
+
+
+
+local aiml = serv:Channel("aim lock")
+aiml:Label("aim lock.")
+aiml:Seperator()
+aiml:Button("silent aim", function()
+DiscordLib:Notification("Notification", "silent aim activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/Lock",true))()
+end)
+aiml:Button("silent aim", function()
+DiscordLib:Notification("Notification", "silent aim activate!", "Okay!")
+end)
+aiml:Button("aim lock (k)", function()
+DiscordLib:Notification("Notification", "aim lock activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/silent_aim/main/Aim",true))()
+end)
+aiml:Button("aim lock (q)", function()
+DiscordLib:Notification("Notification", "aim lock activate!", "Okay!")
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
+end)
+
+local lag = serv:Channel("anti lag")
+lag:Label("anti lag.")
+lag:Seperator()
+
+lag:Button("fps booster", function()
+DiscordLib:Notification("Notification", "fps booster activate!", "Okay!")
+end)
+lag:Button("anti lag (Recommended)", function()
+DiscordLib:Notification("Notification", "anti lag activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti-lag-v2-fps/main/Dhm",true))()
+end)
+lag:Button("anti lag (Not recommended)", function()
+DiscordLib:Notification("Notification", "anti lag  activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti_lag_v3/main/Dont",true))()
+end)
+lag:Button("anti lag", function()
+DiscordLib:Notification("Notification", "anti lag activate!", "Okay!")
+end)
+
+
+
+local anim = serv:Channel("all animation (fe)")
+
+anim:Label("animation fe")
+anim:Seperator()
+anim:Button("Toy", function()
+DiscordLib:Notification("Notification", "toy activate!", "Okay!")
+
+end)
+anim:Button("SuperHero", function()
+DiscordLib:Notification("Notification", "suprr hero activate!", "Okay!")
+
+end)
+anim:Button("Stylish", function()
+DiscordLib:Notification("Notification", "stylish activate!", "Okay!")
+
+end)
+anim:Button("Robot", function()
+DiscordLib:Notification("Notification", "robot activate!", "Okay!")
+
+end)
+anim:Button("Pirate", function()
+DiscordLib:Notification("Notification", "Pirate activate!", "Okay!")
+
+end)
+anim:Button("Ninja", function()
+DiscordLib:Notification("Notification", "ninja activate!", "Okay!")
+
+end)
+anim:Button("Mage", function()
+DiscordLib:Notification("Notification", "mage activate!", "Okay!")
+
+end)
+anim:Button("Levitation", function()
+DiscordLib:Notification("Notification", "levitation activate!", "Okay!")
+
+end)
+anim:Button("Elder", function()
+DiscordLib:Notification("Notification", "Elder activate!", "Okay!")
+
+end)
+anim:Button("Bubbly", function()
+DiscordLib:Notification("Notification", "buddly activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=910004836"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=910009958"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=910034870"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=910025107"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=910016857"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=910001910"
+Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=910030921"
+Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=910028158"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+anim:Button("Astronaut", function()
+DiscordLib:Notification("Notification", "Astronaut activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=891621366"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=891633237"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=891667138"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=891636393"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=891627522"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=891609353"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=891617961"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+anim:Button("Princess", function()
+DiscordLib:Notification("Notification", "Princess activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=941003647"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=941013098"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=941028902"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=941015281"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=941008832"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=940996062"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=941000007"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+anim:Button("Sneaky", function()
+DiscordLib:Notification("Notification", "Sneaky activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616006778"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616008087"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616008936"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616005863"
+Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=616012453"
+Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=616011509"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+anim:Button("Ghost", function()
+DiscordLib:Notification("Notification", "Ghost activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616006778"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616008087"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616013216"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616008936"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616005863"
+Animate.swimidle.SwimIdle.AnimationId = "http://www.roblox.com/asset/?id=616012453"
+Animate.swim.Swim.AnimationId = "http://www.roblox.com/asset/?id=616011509"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+anim:Button("Confident", function()
+DiscordLib:Notification("Notification", "Confident activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1069977950"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=1069987858"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=1070017263"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1070001516"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1069984524"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1069946257"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1069973677"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+anim:Button("Patrol", function()
+DiscordLib:Notification("Notification", "Patrol activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1149612882"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=1150842221"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=1151231493"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1150967949"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1148811837"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1148811837"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1148863382"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+
+anim:Button("levitation", function()
+DiscordLib:Notification("Notification", "levitation activate!","okay!")
+loadstring(game:HttpGet('https://pastebin.com/raw/AryTwN4z'))()
+end)
+
+
+anim:Button("Zombie", function()
+DiscordLib:Notification("Notification", "Zombie activate!", "Okay!")
+wait()
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
+Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=616161997"
+Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=616156119"
+Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=616157476"
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true 
+end)
+
+
+local textbs = serv:Channel("Textboxes")
+
+textbs:Textbox("text for console", "Type here!", true, function(t)
+print(t)
+end)
+
+
+local credits = serv:Channel("credits")
+credits:Button("credits", function()
+DiscordLib:Notification("Notification", "LOOK CREDITS!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/creditsgui/main/xd",true))()
+wait(12)
+game.Players.LocalPlayer.PlayerGui.creditssss:Destroy()
+
+end)
