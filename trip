@@ -1,8 +1,9 @@
---trip hub premiun v1.2
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
-local welcome = Instance.new("ScreenGui")
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local ImageLabel = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
@@ -10,14 +11,14 @@ local TextLabel_2 = Instance.new("TextLabel")
 
 --Properties:
 
-welcome.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-welcome.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = welcome
+Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Frame.BorderColor3 = Color3.fromRGB(0, 85, 127)
 Frame.BorderSizePixel = 7
-Frame.Position = UDim2.new(0.3, 0, 0.2, 0)
+Frame.Position = UDim2.new(0.368107289, 0, 0.376703829, 0)
 Frame.Size = UDim2.new(0, 423, 0, 241)
 
 ImageLabel.Parent = Frame
@@ -46,8 +47,19 @@ TextLabel_2.Font = Enum.Font.SourceSans
 TextLabel_2.Text = "TRIP HUB!"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 36.000
+local script = Instance.new("LocalScript",Frame)
 
-wait(6)
+
+      local tween = Instance.new("LocalScript")
+local object = script.Parent
+object.AnchorPoint = Vector2.new(0.5, 0.5)
+object.Position = UDim2.new(0.5, 0, 0.-1, 0)
+ 
+wait(1.7)
+ 
+object:TweenPosition(UDim2.new(0.5, 0, 0.5, 0))
+
+wait(5)
 game.Players.LocalPlayer.PlayerGui.ScreenGui:Destroy()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/updategui/main/xd",true))()
