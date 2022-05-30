@@ -178,41 +178,8 @@ end)
 
 
 local player = serv:Channel("Player (FE)")
-player:Label("(fe).")
-player:Seperator()
-player:Button("headless (fe)", function()
-DiscordLib:Notification("Notification", "headless activate!", "Okay!")
-game.Players.LocalPlayer.Character.Head.Transparency = 1
 
-for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
-
-if (v:IsA("Decal")) then
-
-v:Destroy()
-
-end
-
-end
-end)
-player:Button("korblox (fe)", function()
-DiscordLib:Notification("Notification", "korblox activate!", "Okay!")
-local ply = game.Players.LocalPlayer
-
-        local chr = ply.Character
-
-        chr.RightLowerLeg.MeshId = "902942093"
-
-        chr.RightLowerLeg.Transparency = "1"
-
-        chr.RightUpperLeg.MeshId = "http://www.roblox.com/asset/?id=902942096"
-
-        chr.RightUpperLeg.TextureID = "http://roblox.com/asset/?id=902843398"
-
-        chr.RightFoot.MeshId = "902942089"
-
-        chr.RightFoot.Transparency = "1"
-end)
-player:Button("korblox & headless (fe) gui", function()
+player:Button("korblox & headless gui", function()
 DiscordLib:Notification("Notification", "korblox headless gui activate!", "Okay!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/kor_hed_gui/main/Gui",true))()
 end)
