@@ -9,14 +9,6 @@ local newsound = Instance.new("Sound",workspace)
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-
-newsound.Name = "intro"
-newsound.SoundId = "rbxassetid://9780111686"
-newsound.Looped = true
-newsound:Play()
-wait(9)
-newsound:Destroy()
-
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 Frame.BorderColor3 = Color3.fromRGB(0, 85, 127)
@@ -58,11 +50,17 @@ local object = script.Parent
 object.AnchorPoint = Vector2.new(0.5, 0.5)
 object.Position = UDim2.new(0.5, 0, 0.-1, 0)
  
-wait(1.7)
+wait(1)
  
 object:TweenPosition(UDim2.new(0.5, 0, 0.5, 0))
 
-wait(5)
+newsound.Name = "intro"
+newsound.SoundId = "rbxassetid://9780111686"
+newsound.Looped = true
+newsound:Play()
+wait(9)
+newsound:Destroy()
+
 game.Players.LocalPlayer.PlayerGui.ScreenGui:Destroy()
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/updategui/main/xd',true))()
