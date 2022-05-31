@@ -62,14 +62,14 @@ object:TweenPosition(UDim2.new(0.5, 0, 0.5, 0))
 wait(5)
 game.Players.LocalPlayer.PlayerGui.ScreenGui:Destroy()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/updategui/main/xd",true))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GamerEmilianoFF/updategui/main/xd',true))()
 wait(5)
 game.Players.LocalPlayer.PlayerGui.update:Destroy()
 
 
 
 
-local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+local DiscordLib = loadstring(game:HttpGet'https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt')()
 
 local win = DiscordLib:Window("Trip hub premium v1")
 
