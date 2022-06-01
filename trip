@@ -39,7 +39,7 @@ TextLabel_2.BorderColor3 = Color3.fromRGB(25, 25, 25)
 TextLabel_2.Position = UDim2.new(0, 0, 0.797470808, 0)
 TextLabel_2.Size = UDim2.new(0, 423, 0, 50)
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "TRIP HUB PREMIUM!"
+TextLabel_2.Text = "TRIP HUB PREMIUM V1.2!"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 36.000
 local script = Instance.new("LocalScript",Frame)
@@ -72,14 +72,18 @@ game.Players.LocalPlayer.PlayerGui.update:Destroy()
 
 local DiscordLib = loadstring(game:HttpGet'https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt')()
 
-local win = DiscordLib:Window("Trip hub premium v1")
+local win = DiscordLib:Window("Trip hub premium v1.2")
 
-local serv = win:Server("trip hub premium v1", "")
+local serv = win:Server("trip hub premium v1.2", "")
 
 local scri = serv:Channel("script")
 scri:Label("speed bypass")
 scri:Seperator()
 
+scri:Button("speed bypass toggle (c)", function()
+DiscordLib:Notification("Notification", "speed bypass toggle activate!", "Okay!")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/angeloX041/Speedc/main/SuperSpeedC ", true))()
+end)
 
 scri:Button("speed bypass button", function()
 DiscordLib:Notification("Notification", "speed bypass activate!", "Okay!")
@@ -304,7 +308,7 @@ DiscordLib:Notification("Notification", "cursor red activate!", "Okay!")
 local IAPortable = Instance.new("ScreenGui")
 local Cursor = Instance.new("ImageLabel")
 local Hitmarker = Instance.new("ImageLabel")
-IAPortable.Name = "IA Portable"
+IAPortable.Name = "IAPortable"
 IAPortable.Parent = game:GetService('CoreGui')
 IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Cursor.Name = "Cursor"
@@ -323,7 +327,7 @@ DiscordLib:Notification("Notification", "cursor white activate!", "Okay!")
 local IAPortable = Instance.new("ScreenGui")
 local Cursor = Instance.new("ImageLabel")
 local Hitmarker = Instance.new("ImageLabel")
-IAPortable.Name = "IA Portable"
+IAPortable.Name = "IAPortable"
 IAPortable.Parent = game:GetService('CoreGui')
 IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Cursor.Name = "Cursor"
@@ -342,7 +346,7 @@ DiscordLib:Notification("Notification", "cursor white activate!", "Okay!")
 local IAPortable = Instance.new("ScreenGui")
 local Cursor = Instance.new("ImageLabel")
 local Hitmarker = Instance.new("ImageLabel")
-IAPortable.Name = "IA Portable"
+IAPortable.Name = "IAPortable"
 IAPortable.Parent = game:GetService('CoreGui')
 IAPortable.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Cursor.Name = "Cursor"
@@ -359,7 +363,134 @@ curs:Button("cursor", function()
 DiscordLib:Notification("Notification", "cursor activate!", "Okay!")
 end)
 
+curs:Button("cursor black", function()
+DiscordLib:Notification("Notification", "cursor black activate!", "Okay!")
+local gui = Instance.new("ScreenGui")
+local black = Instance.new("ImageLabel")
+local red = Instance.new("ImageLabel")
+local orange = Instance.new("ImageLabel")
+local green = Instance.new("ImageLabel")
+local rare = Instance.new("ImageLabel")
 
+
+
+gui.Name = "gui"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+black.Name = "black"
+black.Parent = gui
+black.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+black.BackgroundTransparency = 33.000
+black.Position = UDim2.new(0.5, 0, 0.5, 0)
+black.Size = UDim2.new(0, 100, 0, 100)
+black.Image = "http://www.roblox.com/asset/?id=4758083111"
+end)
+
+curs:Button("cursor red circle", function()
+DiscordLib:Notification("Notification", "cursor red activate!", "Okay!")
+local gui = Instance.new("ScreenGui")
+local black = Instance.new("ImageLabel")
+local red = Instance.new("ImageLabel")
+local orange = Instance.new("ImageLabel")
+local green = Instance.new("ImageLabel")
+local rare = Instance.new("ImageLabel")
+
+
+
+gui.Name = "gui"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+red.Name = "red"
+red.Parent = gui
+red.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+red.BackgroundTransparency = 33.000
+red.Position = UDim2.new(0.5, 0, 0.5, 0)
+red.Size = UDim2.new(0, 100, 0, 100)
+red.Image = "http://www.roblox.com/asset/?id=2479145114"
+
+end)
+
+curs:Button("cursor orange", function()
+DiscordLib:Notification("Notification", "cursor orange activate!", "Okay!")
+local gui = Instance.new("ScreenGui")
+local black = Instance.new("ImageLabel")
+local red = Instance.new("ImageLabel")
+local orange = Instance.new("ImageLabel")
+local green = Instance.new("ImageLabel")
+local rare = Instance.new("ImageLabel")
+
+
+
+gui.Name = "gui"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+orange.Name = "orange"
+orange.Parent = gui
+orange.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+orange.BackgroundTransparency = 33.000
+orange.Position = UDim2.new(0.5, 0, 0.5, 0)
+orange.Size = UDim2.new(0, 57, 0, 51)
+orange.Image = "http://www.roblox.com/asset/?id=6918342249"
+
+end)
+
+curs:Button("cursor green", function()
+DiscordLib:Notification("Notification", "cursor green activate!", "Okay!")
+local gui = Instance.new("ScreenGui")
+local black = Instance.new("ImageLabel")
+local red = Instance.new("ImageLabel")
+local orange = Instance.new("ImageLabel")
+local green = Instance.new("ImageLabel")
+local rare = Instance.new("ImageLabel")
+
+
+
+gui.Name = "gui"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+green.Name = "green"
+green.Parent = gui
+green.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+green.BackgroundTransparency = 33.000
+green.Position = UDim2.new(0.5, 0, 0.5, 0)
+green.Size = UDim2.new(0, 314, 0, 243)
+green.Image = "http://www.roblox.com/asset/?id=5998123220"
+
+end)
+
+curs:Button("cursor rare", function()
+DiscordLib:Notification("Notification", "cursor rare activate!", "Okay!")
+local gui = Instance.new("ScreenGui")
+local black = Instance.new("ImageLabel")
+local red = Instance.new("ImageLabel")
+local orange = Instance.new("ImageLabel")
+local green = Instance.new("ImageLabel")
+local rare = Instance.new("ImageLabel")
+
+
+
+gui.Name = "gui"
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+rare.Name = "rare"
+rare.Parent = gui
+rare.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rare.BackgroundTransparency = 33.000
+rare.Position = UDim2.new(0.5, 0, 0.5, 0)
+rare.Size = UDim2.new(0, 68, 0, 55)
+rare.Image = "http://www.roblox.com/asset/?id=251497633"
+end)
+curs:Seperator()
+curs:Button("destroy all cursor", function()
+DiscordLib:Notification("Notification", "click 5 for destroy all!", "Okay!")
+game.CoreGui.IAPortable:Destroy()
+game.Players.LocalPlayer.PlayerGui.gui:Destroy()
+end)
 
 
 local aiml = serv:Channel("aim lock")
